@@ -10,5 +10,8 @@ app.listen(PORT, (err) => {
         console.error("não foi possivel conectar-se", err);
         return;
     }
-    console.log("Servidor rodando na porta", PORT);
+    console.log(`
+    
+        🌟 Servidor rodando na Porta ${PORT} 🌟
+    `);
 });
