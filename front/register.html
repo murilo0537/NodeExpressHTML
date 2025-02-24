@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>Valcore</title>
 </head>
+
 <body>
-    
+  <main class="login-main">
+    <div class="side-container" style="margin-left: auto;">
+      <div class="side-content">
+        <h1>Crie sua conta</h1>
+        <form id="login-form" class="classic-form">
+          <div class="column">
+            <label for="email">Nome</label>
+            <input type="email" name="email" placeholder="Crie seu nome de usuário!">
+          </div>
+          <div class="column">
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Insira seu email">
+          </div>
+          <div class="column">
+            <label for="password">Senha</label>
+            <input type="password" name="password" placeholder="Crie uma senha">
+          </div>
+          <div class="column">
+            <label for="password">Confirmar Senha</label>
+            <input type="password" name="password" placeholder="Confirme sua senha">
+          </div>
+          <button type="submit" style="align-self: end;">Cadastrar-se</button>
+        </form>
+        <p class="regTrans" style="align-self: end;">Já possui conta?</p>
+      </div>
+
+    </div>
+  </main>
 </body>
+<script src="js/register.js"></script>
 </html>
