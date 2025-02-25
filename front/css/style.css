@@ -2,8 +2,10 @@
 
 :root {
   --color-primary: #f00a2d;
-  --color-secondary: #66131f;
+  --color-secondary: #931729;
   --color-tertiary: #ff3a85;
+  --color-admin-primary: #ff9500;
+  --color-admin-secondary: #b95600;
   --color-background: #1c1a1a;
   --color-text-primary: #eaeaea;
 }
@@ -38,12 +40,14 @@ body {
 }
 
 .side-container {
+  filter: saturate(0.2);
   transition: 0.5s;
   max-width: 900px;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: inherit;
   background-color: var(--color-primary);
-  padding: 20px;
+  padding: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,7 +102,6 @@ body {
   border: none;
   cursor: text;
   filter: brightness(0.8);
-
 }
 
 .classic-form input:hover {
@@ -122,5 +125,57 @@ body {
 
 .classic-form button:hover {
   width: 100%;
-  box-shadow: 0px 0px 30px white;
+}
+
+.adm-switch-row {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  gap: 10px;
+}
+
+.adm-switch-row img {
+  height: 25px;
+}
+
+.adm-switch {
+  background-color: white;
+  width: 40px;
+  border-radius: 15px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.adm-switch-ball {
+  background-color: var(--color-primary);
+  height: 100%;
+  width: 50%;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.adm-switch-ball-active {
+  background-color: var(--color-admin-primary);
+  transform: translateX(100%);
+}
+
+.side-container-admin {
+  background-color: var(--color-admin-primary);
+}
+
+.side-container-admin .side-content .classic-form input{
+  background-color: var(--color-admin-secondary);
+
+}
+
+
+@media screen and (max-width: 1100px) {
+  .side-container {
+    padding: 20px;
+  }
+
+  .classic-form button {
+    width: 60%;
+  }
 }

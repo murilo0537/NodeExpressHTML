@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Valcore</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.css">
-  <title>Valcore</title>
-</head>
-
-<body>
-  <main class="login-main">
-    <div class="side-container">
-      <div class="side-content">
-        <h1>Insira suas informações de Login</h1>
-        <form id="login-form" class="classic-form">
-          <div class="column">
-            <label for="email">Email</label>
-            <input type="email" name="email" placeholder="Insira seu email">
+  <body>
+    <main class="login-main">
+      <div class="side-container">
+        <div class="adm-switch-row row">
+          <img src="assets/user.png" />
+          <div class="adm-switch">
+            <div class="adm-switch-ball"></div>
           </div>
-          <div class="column">
-            <label for="password">Senha</label>
-            <input type="password" name="password" placeholder="Insira sua senha">
-          </div>
-          <button type="submit">Login</button>
-        </form>
-        <p class="regTrans">Não possui conta?</p>
+          <img src="assets/crown.png" />
+        </div>
+        <div class="side-content">
+          <h1>Insira suas informações de Login</h1>
+          <form id="login-form" class="classic-form">
+            <div class="column">
+              <label for="email">Email</label>
+              <input type="email" name="email" placeholder="Insira seu email" />
+            </div>
+            <div class="column">
+              <label for="password">Senha</label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Insira sua senha"
+              />
+            </div>
+            <button type="submit">Login</button>
+          </form>
+          <p class="regTrans">Não possui conta?</p>
+        </div>
       </div>
-
-    </div>
-  </main>
-</body>
-<script src="js/login.js"></script>
+    </main>
+  </body>
+  <script src="js/login.js"></script>
 </html>
