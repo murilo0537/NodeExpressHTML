@@ -4,8 +4,6 @@
   --color-primary: #f00a2d;
   --color-secondary: #931729;
   --color-tertiary: #ff3a85;
-  --color-admin-primary: #ff9500;
-  --color-admin-secondary: #b95600;
   --color-background: #1c1a1a;
   --color-text-primary: #eaeaea;
 }
@@ -20,6 +18,7 @@
 body {
   background-color: var(--color-background);
   color: var(--color-text-primary);
+  overflow-x: hidden;
 }
 
 .btn {
@@ -87,9 +86,10 @@ body {
   border: none;
   padding: 15px;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: filter 0.3s;
   cursor: pointer;
   color: white;
+  position: relative;
 }
 
 .classic-form input::placeholder {
@@ -127,48 +127,36 @@ body {
   width: 100%;
 }
 
-.adm-switch-row {
+.loginBG-img {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  gap: 10px;
+  right: -150px;
+  background-image: url(../assets/brim.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: saturate(0);
+  min-height: 100vh;
+  height: inherit;
+  /* max-height: 100vh;
+  width: 55vi; */
+  transition: 0.5s;
+  opacity: 0;
 }
 
-.adm-switch-row img {
-  height: 25px;
+.passInput {
+  position: relative; /* Necessário para o posicionamento do ::before */
+  display: flex;
 }
 
-.adm-switch {
+.passInput::before {
+  content: "";
+  display: block;
   background-color: white;
-  width: 40px;
-  border-radius: 15px;
-  padding: 4px;
-  cursor: pointer;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  z-index: 1000;
 }
-
-.adm-switch-ball {
-  background-color: var(--color-primary);
-  height: 100%;
-  width: 50%;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.adm-switch-ball-active {
-  background-color: var(--color-admin-primary);
-  transform: translateX(100%);
-}
-
-.side-container-admin {
-  background-color: var(--color-admin-primary);
-}
-
-.side-container-admin .side-content .classic-form input{
-  background-color: var(--color-admin-secondary);
-
-}
-
 
 @media screen and (max-width: 1100px) {
   .side-container {
