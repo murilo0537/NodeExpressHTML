@@ -47,7 +47,7 @@ body {
   min-height: 100vh;
   height: inherit;
   background-color: var(--color-primary);
-  padding: 40px;
+  padding: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
