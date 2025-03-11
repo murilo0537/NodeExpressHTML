@@ -7,6 +7,8 @@ router.post('/register', async (req, res) => {
     try {
         const { name, email, password } = req.body;
 
+        console.log("📩 Recebendo requisição:", { name, email, password });
+
         const existingUser = await User.findUserByEmail(email);
         if (existingUser) {
             return res.status(400).json({ message: 'E-mail já cadastrado' });
